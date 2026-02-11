@@ -58,5 +58,17 @@ Dopo aver confrontato diverse architetture, **XGBoost** è stato selezionato com
 
 1. **Clona la repository:**
    ```bash
-   git clone [https://github.com/TUO_USERNAME/CardioSentinel.git](https://github.com/TUO_USERNAME/CardioSentinel.git)
+   git clone [https://github.com/simone-d-a/CardioSentinel.git](https://github.com/simone-d-a/CardioSentinel.git)
    cd CardioSentinel
+2. Installa le dipendenze:  
+      ```bash
+       pip install pandas matplotlib seaborn scikit-learn xgboost shap
+4. Prepara i dati:
+    ```bash
+      python data_engineering.py
+5. Addestra il modello e genera i risultati:
+   ```bash
+    python modello_finale.py
+
+## 👨‍💻 Autore
+Simone Domenico Avitabile - Università degli Studi di Salerno Matr.0512120134
