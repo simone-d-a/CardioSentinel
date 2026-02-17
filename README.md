@@ -16,35 +16,6 @@
 
 ---
 
-## 📊 Dataset e Preprocessing
-Il progetto utilizza il **Cleveland Heart Disease Dataset (UCI)**.
-A differenza dei dataset basati su sondaggi, questo set di dati contiene 14 parametri biomedici tra cui:
-* `cp`: Tipo di dolore toracico.
-* `thal`: Talassemia.
-* `ca`: Numero di vasi colorati alla fluoroscopia.
-* `oldpeak`: Depressione ST indotta dall'esercizio.
-
-**Operazioni effettuate:**
-1.  Pulizia dei valori mancanti.
-2.  Data Engineering conservativo (nessun One-Hot Encoding eccessivo per mantenere l'interpretabilità).
-3.  Normalizzazione MinMax.
-
----
-
-## 🏆 Risultati Sperimentali
-
-Dopo aver confrontato diverse architetture, **XGBoost** è stato selezionato come modello definitivo.
-
-| Modello | Accuracy | Recall (Sensibilità) | Precision |
-| :--- | :--- | :--- | :--- |
-| Decision Tree | 75% | 57% | 84% |
-| Random Forest | 81% | 75% | 84% |
-| **XGBoost (CardioSentinel)** | **86%** | **82%** | **88%** |
-
-> **Nota:** Sebbene la Random Forest mostri una robustezza generale simile, XGBoost è stato preferito per la sua superiore capacità di individuare i casi positivi (Recall 82% vs 75%).
-
----
-
 ## 📂 Struttura della Repository
 * `data_engineering.py`: Script per la pulizia, normalizzazione e split dei dati.
 * `modello_finale.py`: Pipeline completa che addestra i modelli, genera i grafici di confronto e l'analisi SHAP.
